@@ -1,7 +1,5 @@
 import Foundation
 
-import Foundation
-
 /*
  * Игра
  * Необходимо реализовать игру «Камень-ножница-бумага».
