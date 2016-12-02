@@ -84,26 +84,3 @@ func rockPaperScissors() -> Any? {
 }
 
 rockPaperScissors()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
