@@ -1,4 +1,4 @@
-# rock-paper-scissors
+# Game «Rock Paper Scissors»
 A simple console game «Rock-Paper-Scissors». It's for self-development, learning Swift, Xcode, Tests and Git.
 
 ## Version history:
