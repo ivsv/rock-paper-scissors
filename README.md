@@ -2,9 +2,9 @@
 A simple console game «Rock-Paper-Scissors». It's for self-development, learning Swift, Xcode, Tests and Git.
 
 ## Version history:
-* 1.0: First stable version;
-* 2.0: Added an ability to continue to play with computer;
-  * 2.1:  Fixed bugs, redesigned program outputs, fixed random value;
+* 1.0: First stable version
+* 2.0: Added an ability to continue to play with computer
+  * 2.1:  Fixed bugs, redesigned program outputs, fixed random value
 
 ## How to launch and test current game?
 1. ```git clone https://github.com/ivsv/rock-paper-scissors ~/to-your-local-directory-wherever-you-want```
