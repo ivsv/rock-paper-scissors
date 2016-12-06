@@ -9,7 +9,7 @@ import Foundation
 
 print("Welcome to game 'Rock-Paper-Scissors!'")
 
-func playRockPaperScissors() -> Any? {
+func playRockPaperScissors() -> Int? {
   print("***********************")
   print("\nChoose your item for fight! [type a number of choice..]")
   print("1: Rock")
@@ -19,6 +19,11 @@ func playRockPaperScissors() -> Any? {
   let userResponseAboutItem = Int(readLine()!)
   var userItem: String?
 
+  if userResponseAboutItem == nil {
+    print("Good luck! :)")
+    return nil
+  }
+  
   switch userResponseAboutItem! {
   case 1:
     userItem = "Rock"
@@ -30,7 +35,7 @@ func playRockPaperScissors() -> Any? {
     return nil
   }
 
-  let random = Float(arc4random() / UINT32_MAX)
+  let random = Float(Float(arc4random()) / Float(UINT32_MAX))
   var computerItem: String?
 
   if random < 0.33 {
@@ -96,16 +101,16 @@ func playRockPaperScissors() -> Any? {
     }
   }
 
-  let userResponceAboutContinueToPlay: String?
-
   if isUserWin == isComputerWin {
       playRockPaperScissors()
       return nil
   }
 
+  let userResponceAboutContinueToPlay: String?
+  
   print("\nOne more else?")
-  print("\ny: Yes;")
-  print("n: No;\n")
+  print("\ny: Yes")
+  print("n: No\n")
   userResponceAboutContinueToPlay = readLine()
 
   if userResponceAboutContinueToPlay == "y" {
@@ -114,8 +119,8 @@ func playRockPaperScissors() -> Any? {
     print("Good luck! :)")
     return nil
   }
-print("\n***********************\n")
   return nil
 }
 
 playRockPaperScissors()
+print("***********************\n")
