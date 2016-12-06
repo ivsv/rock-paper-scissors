@@ -34,7 +34,8 @@ func rockPaperScissors() -> Any? {
     return nil
   }
   
-  let random = Float(arc4random() / UInt32.max)
+  let random = Float(Float(arc4random()) / Float(UInt32.max))
+  print(random)
   var computerItem: String?
   
   if random < 0.33 {
@@ -45,7 +46,7 @@ func rockPaperScissors() -> Any? {
     computerItem = "Scissors"
   }
   
-  print("User's choice: \(userItem!)")
+  print("User's choice: \(userItem!)\n")
   print("FIGHT!")
   print("\(userItem!) VS ...")
   print("\(userItem!) VS \(computerItem!)")
