@@ -1,24 +1,25 @@
 import Foundation
 
 /*
- * Игра
- * Необходимо реализовать игру «Камень-ножница-бумага».
- * Нужно дать пользователю сыграть против компьютера.
- * Камень побеждает ножницы, ножницы побеждают бумагу, а бумага побеждает камень.
+ * Is's a game
+ * Task: Create a game «Rock-Paper-Scissors».
+ * Rock is stronger than scisssors, scissors is stronger than paper, and paper is stronger than rock.
+ * Author: Student Ivan Shokurov
  */
 
 print("Welcome to game 'Rock-Paper-Scissors!'")
 
-func playRockPaperScissors() -> Int? {
-  print("***********************")
-  print("\nChoose your item for fight! [type a number of choice..]")
-  print("1: Rock")
-  print("2: Paper")
-  print("3: Scissors\n")
+// GLOBAL VARIABLES
+var userResponseAboutItem: Int?
+var userItem:              String?
+var computerItem:          String?
+var wonCounter:            (userCount: Int, computerCount: Int)?
 
-  let userResponseAboutItem = Int(readLine()!)
-  var userItem: String?
 
+// GETTING USER DATA
+func getItemForUser() -> Int? {
+  userResponseAboutItem = Int(readLine()!)
+  
   if userResponseAboutItem == nil {
     print("Good luck! :)")
     return nil
@@ -34,10 +35,14 @@ func playRockPaperScissors() -> Int? {
   default:
     return nil
   }
+  
+  return nil
+}
 
+// GETTING DATA FOR COMPUTER
+func getItemForComputer() -> Int? {
   let random = Float(Float(arc4random()) / Float(UINT32_MAX))
-  var computerItem: String?
-
+  
   if random < 0.33 {
     computerItem = "Rock"
   } else if random == 0.33 && random < 0.66 {
@@ -45,6 +50,20 @@ func playRockPaperScissors() -> Int? {
   } else {
     computerItem = "Scissors"
   }
+  
+  return nil
+}
+
+// MAIN FUNCTION
+func main() -> Int? {
+  print("***********************")
+  print("\nChoose your item for fight! [type a number of choice..]")
+  print("1: Rock")
+  print("2: Paper")
+  print("3: Scissors\n")
+
+  getItemForUser()
+  getItemForComputer()
 
   print("\nUser's choice: \(userItem!)\n")
   print("FIGHT!")
@@ -102,7 +121,7 @@ func playRockPaperScissors() -> Int? {
   }
 
   if isUserWin == isComputerWin {
-      playRockPaperScissors()
+      main()
       return nil
   }
 
@@ -114,13 +133,13 @@ func playRockPaperScissors() -> Int? {
   userResponceAboutContinueToPlay = readLine()
 
   if userResponceAboutContinueToPlay == "y" {
-    playRockPaperScissors()
-  } else if userResponceAboutContinueToPlay == "n" {
+    main()
+  } else if userResponceAboutContinueToPlay == "n" || userResponceAboutContinueToPlay == nil {
     print("Good luck! :)")
     return nil
   }
   return nil
 }
 
-playRockPaperScissors()
+main()
 print("***********************\n")
