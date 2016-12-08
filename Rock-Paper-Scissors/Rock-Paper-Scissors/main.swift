@@ -9,16 +9,8 @@ import Foundation
 
 print("Welcome to game 'Rock-Paper-Scissors!'")
 
-// GLOBAL VARIABLES
-var userResponseAboutItem: Int?
-var userItem:              String?
-var computerItem:          String?
-var wonCounter:            (userCount: Int, computerCount: Int)?
-
-// GETTING DATA FOR COMPUTER
-
 // MAIN FUNCTION
-func main() -> Int? {
+func main() {
   print("***********************")
   print("\nChoose your item for fight! [type a number of choice..]")
   print("1: Rock")
@@ -36,57 +28,49 @@ func main() -> Int? {
   let messageAboutStandoff    = "STANDOFF!\n"
   let messageAboutComputerWin = "COMPUTER WIN!\n"
   let messageAboutUserWin     = "YOU WIN!\n"
-  var isUserWin:     Bool?
-  var isComputerWin: Bool?
 
+  // STANDOFF
   if userItem == computerItem {
     print("\(messageAboutStandoff)\n")
     print("We need to win computer!")
-    isUserWin     = false
-    isComputerWin = false
+    showWonScore()
+    main()
+    return
   }
 
+  // Who is lucker?
   if userItem == "Rock" {
     if computerItem == "Paper" {
       print(messageAboutComputerWin)
-      isUserWin     = false
-      isComputerWin = true
+      addWonPointTo("Computer")
 
     } else if computerItem == "Scissors" {
       print(messageAboutUserWin)
-      isUserWin     = false
-      isComputerWin = true
+      addWonPointTo("User")
     }
   }
 
   if userItem == "Paper" {
     if computerItem == "Rock" {
       print(messageAboutUserWin)
-      isUserWin     = true
-      isComputerWin = false
+      addWonPointTo("User")
     } else if computerItem == "Scissors" {
       print(messageAboutComputerWin)
-      isUserWin     = false
-      isComputerWin = true
+      addWonPointTo("Computer")
     }
   }
 
   if userItem == "Scissors" {
     if computerItem == "Rock" {
       print(messageAboutComputerWin)
-      isUserWin     = false
-      isComputerWin = true
+      addWonPointTo("Computer")
     } else if computerItem == "Paper" {
       print(messageAboutUserWin)
-      isUserWin     = true
-      isComputerWin = false
+      addWonPointTo("User")
     }
   }
-
-  if isUserWin == isComputerWin {
-      main()
-      return nil
-  }
+  
+  showWonScore()
 
   let userResponceAboutContinueToPlay: String?
   
@@ -99,9 +83,9 @@ func main() -> Int? {
     main()
   } else if userResponceAboutContinueToPlay == "n" || userResponceAboutContinueToPlay == nil {
     print("Good luck! :)")
-    return nil
+    return
   }
-  return nil
+  return
 }
 
 main()

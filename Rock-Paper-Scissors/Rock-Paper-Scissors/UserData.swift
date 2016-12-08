@@ -1,11 +1,14 @@
 import Foundation
 
-public func getItemForUser() -> Int? {
+var userResponseAboutItem: Int?
+var userItem:              String?
+
+public func getItemForUser() {
   userResponseAboutItem = Int(readLine()!)
   
-  if userResponseAboutItem == nil {
+  guard userResponseAboutItem == 1 || userResponseAboutItem == 2 || userResponseAboutItem == 3 else {
     print("Good luck! :)")
-    return nil
+    return
   }
   
   switch userResponseAboutItem! {
@@ -16,8 +19,6 @@ public func getItemForUser() -> Int? {
   case 3:
     userItem = "Scissors"
   default:
-    return nil
+    return
   }
-  
-  return nil
 }

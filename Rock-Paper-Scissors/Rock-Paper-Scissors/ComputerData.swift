@@ -1,6 +1,8 @@
 import Foundation
 
-public func getItemForComputer() -> Int? {
+var computerItem: String?
+
+public func getItemForComputer() {
   let random = Float(Float(arc4random()) / Float(UINT32_MAX))
   
   if random < 0.33 {
@@ -11,5 +13,4 @@ public func getItemForComputer() -> Int? {
     computerItem = "Scissors"
   }
   
-  return nil
 }
