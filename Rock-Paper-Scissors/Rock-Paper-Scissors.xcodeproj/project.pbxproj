@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F96CD3F01DF9150E004F21A1 /* ComputerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96CD3EF1DF9150E004F21A1 /* ComputerData.swift */; };
+		F96CD3F21DF91524004F21A1 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96CD3F11DF91524004F21A1 /* UserData.swift */; };
 		F9F2067B1DF14494005DCEA8 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F2067A1DF14494005DCEA8 /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +25,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F96CD3EF1DF9150E004F21A1 /* ComputerData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComputerData.swift; sourceTree = "<group>"; };
+		F96CD3F11DF91524004F21A1 /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		F9F206771DF14494005DCEA8 /* Rock-Paper-Scissors */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Rock-Paper-Scissors"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9F2067A1DF14494005DCEA8 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +62,8 @@
 			isa = PBXGroup;
 			children = (
 				F9F2067A1DF14494005DCEA8 /* main.swift */,
+				F96CD3EF1DF9150E004F21A1 /* ComputerData.swift */,
+				F96CD3F11DF91524004F21A1 /* UserData.swift */,
 			);
 			path = "Rock-Paper-Scissors";
 			sourceTree = "<group>";
@@ -120,7 +126,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F96CD3F01DF9150E004F21A1 /* ComputerData.swift in Sources */,
 				F9F2067B1DF14494005DCEA8 /* main.swift in Sources */,
+				F96CD3F21DF91524004F21A1 /* UserData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +258,7 @@
 				F9F206801DF14494005DCEA8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -15,44 +15,7 @@ var userItem:              String?
 var computerItem:          String?
 var wonCounter:            (userCount: Int, computerCount: Int)?
 
-
-// GETTING USER DATA
-func getItemForUser() -> Int? {
-  userResponseAboutItem = Int(readLine()!)
-  
-  if userResponseAboutItem == nil {
-    print("Good luck! :)")
-    return nil
-  }
-  
-  switch userResponseAboutItem! {
-  case 1:
-    userItem = "Rock"
-  case 2:
-    userItem = "Paper"
-  case 3:
-    userItem = "Scissors"
-  default:
-    return nil
-  }
-  
-  return nil
-}
-
 // GETTING DATA FOR COMPUTER
-func getItemForComputer() -> Int? {
-  let random = Float(Float(arc4random()) / Float(UINT32_MAX))
-  
-  if random < 0.33 {
-    computerItem = "Rock"
-  } else if random == 0.33 && random < 0.66 {
-    computerItem = "Paper"
-  } else {
-    computerItem = "Scissors"
-  }
-  
-  return nil
-}
 
 // MAIN FUNCTION
 func main() -> Int? {
