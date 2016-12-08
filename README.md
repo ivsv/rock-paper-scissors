@@ -14,5 +14,5 @@ A simple console game «Rock-Paper-Scissors». It's for self-development, learni
 3. Launch the game using [Xcode](https://itunes.apple.com/ru/app/xcode/id497799835?l=en&mt=12)
 
 ## What the nearest plans?
-1. Improving the game adding counter of won by computer and user
+1. <del>Improving the game adding counter of won by computer and user</del> [done]
 2. Learning and adding tests to current project
