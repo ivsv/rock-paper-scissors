@@ -1,0 +1,3 @@
+[submodule "bdd"]
+	path = bdd
+	url = https://github.com/railsware/sleipnir

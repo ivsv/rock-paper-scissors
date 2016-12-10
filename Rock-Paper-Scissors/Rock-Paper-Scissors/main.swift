@@ -11,12 +11,6 @@ print("Welcome to game 'Rock-Paper-Scissors!'")
 
 // MAIN FUNCTION
 func main() {
-  print("***********************")
-  print("\nChoose your item for fight! [type a number of choice..]")
-  print("1: Rock")
-  print("2: Paper")
-  print("3: Scissors\n")
-
   getItemForUser()
   getItemForComputer()
 

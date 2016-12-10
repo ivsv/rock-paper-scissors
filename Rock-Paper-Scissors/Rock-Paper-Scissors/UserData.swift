@@ -4,12 +4,22 @@ var userResponseAboutItem: Int?
 var userItem:              String?
 
 public func getItemForUser() {
-  userResponseAboutItem = Int(readLine()!)
-  
-  guard userResponseAboutItem == 1 || userResponseAboutItem == 2 || userResponseAboutItem == 3 else {
-    print("Good luck! :)")
-    return
-  }
+  repeat {
+    print("***********************")
+    print("\nChoose your item for fight! [type a number of choice..]")
+    print("1: Rock")
+    print("2: Paper")
+    print("3: Scissors\n")
+    
+    userResponseAboutItem = Int(readLine()!)
+    
+    if userResponseAboutItem! >= 1 && userResponseAboutItem! <= 3 {
+      continue
+    } else {
+      print("Type the correct number..")
+    }
+    
+  } while !(userResponseAboutItem == 1 || userResponseAboutItem == 2 || userResponseAboutItem == 3)
   
   switch userResponseAboutItem! {
   case 1:
